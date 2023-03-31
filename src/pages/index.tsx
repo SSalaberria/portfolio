@@ -9,7 +9,13 @@ import { About, Skills, Contact } from "~/components/sections";
 
 type Props = {};
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "en", ["common"])),
+  },
+});
+
+const Home: NextPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Head>
