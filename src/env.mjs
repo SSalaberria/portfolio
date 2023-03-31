@@ -48,10 +48,7 @@ if (!!process.env.SKIP_ENV_VALIDATION == false) {
   );
 
   if (parsed.success === false) {
-    console.error(
-      "❌ Invalid environment variables:",
-      parsed.error.flatten().fieldErrors,
-    );
+    console.error("❌ Invalid environment variables:", parsed.error.flatten().fieldErrors);
     throw new Error("Invalid environment variables");
   }
 
@@ -66,6 +63,7 @@ if (!!process.env.SKIP_ENV_VALIDATION == false) {
             ? "❌ Attempted to access a server-side environment variable on the client"
             : `❌ Attempted to access server-side environment variable '${prop}' on the client`,
         );
+
       return target[/** @type {keyof typeof target} */ (prop)];
     },
   });
