@@ -6,6 +6,9 @@
   .container {
     @apply max-w-7xl w-full mx-auto h-auto px-10 clear-both
   }
+  .active {
+    @apply font-bold
+  }
 }
 
 * {
@@ -33,3 +36,4 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 3px solid #fff;
 }
+

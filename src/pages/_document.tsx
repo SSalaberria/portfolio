@@ -19,7 +19,9 @@ export default function Document(props: DocumentProps) {
 
   return (
     <Html lang={currentLocale}>
-      <Head />
+      <Head>
+        <link href="/images/logo-color.svg" rel="icon" type="image/svg+xml" />
+      </Head>
       <body>
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
         <Main />

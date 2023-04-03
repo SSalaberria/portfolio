@@ -5,12 +5,6 @@ import { ThemeOption } from "~/utils/types";
 
 import { Switch } from "../ui/switch.component";
 
-const initThemeState = () => {
-  if (typeof window !== "undefined")
-    return (localStorage?.getItem("theme") as ThemeOption) || "dark";
-  else return "light";
-};
-
 const options = [
   {
     id: "dark",
@@ -23,20 +17,19 @@ const options = [
 ];
 
 export const ThemeSwitch = memo(function ThemeSwitch() {
-  const [theme, setTheme] = useState<ThemeOption>(initThemeState);
+  const [theme, setTheme] = useState<ThemeOption>("dark");
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
 
     setTheme(newTheme);
+    document.documentElement.className = newTheme;
+    localStorage.setItem("theme", newTheme);
   };
 
   useEffect(() => {
-    if (theme) {
-      document.documentElement.className = theme;
-      localStorage.setItem("theme", theme);
-    }
-  }, [theme]);
+    setTheme((localStorage?.getItem("theme") as ThemeOption) || "dark");
+  }, []);
 
   return <Switch options={options} selected={theme} onSelect={toggleTheme} />;
 });
