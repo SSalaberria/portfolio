@@ -18,7 +18,7 @@ export function Layout({ children }: LayoutProps) {
       </Head>
       <Navbar />
 
-      <main className="clear-both flex min-h-screen w-full flex-col items-center justify-center">
+      <main className=" clear-both flex min-h-screen w-full flex-col items-center justify-center">
         {children}
       </main>
     </>

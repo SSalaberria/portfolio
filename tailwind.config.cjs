@@ -10,6 +10,7 @@ module.exports = {
       l: ["1.125rem", { lineHeight: "120%", letterSpacing: "0.03em" }],
       xl: ["1.25rem", { lineHeight: "120%", letterSpacing: "0.03em" }],
       xxl: ["1.5rem", { lineHeight: "120%", letterSpacing: "0.03em" }],
+      title: ["3.5rem", { lineHeight: "200%", letterSpacing: "0.03em" }],
     },
     extend: {
       colors: {
@@ -31,15 +32,12 @@ module.exports = {
         },
         paragraph: {
           dark: "#94a1b2",
-          light: "#8A8A8A",
+          light: "#2d334a",
         },
         headline: {
           dark: "#fffffe",
-          light: "#00000e",
+          light: "#272343",
         },
-      },
-      boxShadow: {
-        "elevation-low": "0px 1px 0px rgba(0, 0, 0, 0.15)",
       },
     },
   },

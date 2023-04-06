@@ -1,7 +1,8 @@
 {
   "sections": {
-    "about": "Acerca",
-    "skills": "Habilidades",
-    "contact": "Contactame"
+    "home": { "label": "Inicio", "heading": "Hola, me llamo","description": "Soy un desarrollador de software apasionado centrado en el desarrollo web con un fuerte deseo de hacer que las cosas no sólo funcionen, sino también que sean escalables." },
+    "about": { "label": "Sobre mi", "description": "¡Hola! Soy Sebastián, un desarrollador de software con afinidad por todo lo relacionado con el desarrollo web. He estado creando cosas en internet desde mi adolescencia, jugando con APIs de juegos y scripts en Python. Avanzando hasta el día de hoy, tengo estudios en ingeniería de sistemas y he adquirido una valiosa experiencia como desarrollador.<br /> <br />La mayor parte de mi experiencia laboral se ha centrado en el desarrollo frontend, lo que lo convierte en la mejor habilidad en mi caja de herramientas. Sin embargo, me encanta experimentar en ambos lados del desarrollo, especialmente cuando se trata de proyectos personales con el stack MERN.<br /> <br />Soy un firme creyente en el aprendizaje y la evolución constante, y siempre me esfuerzo por mantenerme actualizado con las últimas tecnologías y tendencias de la industria. Cuando no estoy ocupado programando, es probable que me encuentres levantando pesas, nadando o jugando algunos videojuegos." },
+    "skills": { "label": "Habilidades" },
+    "contact": { "label": "Contactame" }
   }
 }

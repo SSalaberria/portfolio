@@ -4,7 +4,7 @@ import { appWithTranslation } from "next-i18next";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className="flex w-full bg-background-light-primary text-m text-paragraph-light dark:bg-background-dark-primary dark:text-paragraph-dark">
+    <div className="scrollbar flex w-full bg-background-light-primary text-m text-paragraph-light dark:bg-background-dark-primary dark:text-paragraph-dark">
       <Component {...pageProps} />
     </div>
   );

@@ -5,7 +5,7 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Layout } from "~/components/common";
-import { About, Skills, Contact } from "~/components/sections";
+import { About, Skills, Contact, Home } from "~/components/sections";
 
 type Props = {};
 
@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
   },
 });
 
-const Home: NextPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Portfolio: NextPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Head>
@@ -25,6 +25,7 @@ const Home: NextPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) 
       </Head>
 
       <Layout>
+        <Home />
         <About />
         <Skills />
         <Contact />
@@ -33,4 +34,4 @@ const Home: NextPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) 
   );
 };
 
-export default Home;
+export default Portfolio;

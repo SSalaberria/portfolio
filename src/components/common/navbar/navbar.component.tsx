@@ -14,16 +14,20 @@ export function Navbar() {
   const navOptions = useMemo(
     () => [
       {
+        id: "home",
+        label: t("sections.home.label"),
+      },
+      {
         id: "about",
-        label: t("sections.about"),
+        label: t("sections.about.label"),
       },
       {
         id: "skills",
-        label: t("sections.skills"),
+        label: t("sections.skills.label"),
       },
       {
         id: "contact",
-        label: t("sections.contact"),
+        label: t("sections.contact.label"),
       },
     ],
     [t],
@@ -66,9 +70,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", checkSectionIntersect);
   }, []);
 
+  console.log(navOptions);
+
   return (
     <nav
-      className=" fixed left-0 top-0 z-20 w-full border-b border-gray-200 transition-all duration-500 dark:border-gray-600"
+      className=" fixed left-0 top-0 z-20 w-full border-b border-gray-200 bg-background-light-primary transition-all duration-500 dark:border-gray-600 dark:bg-background-dark-primary"
       style={{
         transform: scrollDir === "down" ? "translate(0, -6rem)" : "translate(0, 0px)",
       }}

@@ -1,0 +1,17 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dotted-circle {
+  position: absolute;
+  bottom: -400px;
+  right: -400px;
+  opacity: 0.3;
+  animation: rotation 120s linear infinite;
+  overflow: hidden;
+}

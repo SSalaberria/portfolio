@@ -4,10 +4,14 @@
 
 @layer components {
   .container {
-    @apply max-w-7xl w-full mx-auto h-auto px-10 clear-both
+    @apply clear-both mx-auto h-auto w-full max-w-7xl px-10;
   }
   .active {
-    @apply font-bold
+    @apply font-bold;
+  }
+
+  .hightlight-hover {
+    @apply relative z-[2] after:absolute after:inset-0 after:z-[-1] after:-ml-1.5 after:h-[105%] after:w-0 after:bg-primary-300 after:transition-all after:duration-1000 after:ease-out hover:after:w-full
   }
 }
 
@@ -24,16 +28,20 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #999 #fff;
 }
 
 body::-webkit-scrollbar {
-  width: 11px;
+  width: 8px;
+  background-color: #95A1AC
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #999;
+  background-color: #778089;
   border-radius: 6px;
-  border: 3px solid #fff;
+  transition: all 0.5s;
 }
 
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #77808990;
+  border-radius: 6px;
+}

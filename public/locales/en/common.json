@@ -1,7 +1,12 @@
 {
   "sections": {
-    "about": "About",
-    "skills": "Skills",
-    "contact": "Contact me"
+    "home": {
+      "label": "Home",
+      "heading": "Hi, my name is",
+      "description": "I&apos;m a passionate software developer focused on web development <br /> with a strong desire to make things that are not only functional but also scalable."
+    },
+    "about": { "label": "About me", "description": "Hey there! I&apos;m Sebastián, a software developer with an affinity for all things related to web development. I&apos;ve been creating things on the internet since my teenage years, toying around with game APIs and Python scripts. Fast forward to today, I&apos;ve got studies in software engineering, and I&apos;ve gained valuable work experience as a developer under my belt. <br /> <br /> Most of my work experience has been focused on frontend development, making it the best skill in my toolbox. However, I love to dabble on both sides of development, especially when it comes to personal projects with the MERN stack. <br /> <br /> I&apos;m a firm believer in constantly learning and evolving, and I always strive to stay up-to-date with the latest technologies and industry trends. When I&apos;m not busy coding, chances are you can find me lifting weights, swimming or playing some video games." },
+    "skills": { "label": "Skills"},
+    "contact": { "label": "Contact me" }
   }
 }
