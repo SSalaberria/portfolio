@@ -4,14 +4,22 @@
 
 @layer components {
   .container {
-    @apply clear-both mx-auto h-auto w-full max-w-7xl px-10;
+    @apply clear-both mx-auto h-auto w-full max-w-5xl px-10 mb-20;
   }
   .active {
-    @apply font-bold;
+    @apply font-semibold;
   }
-
   .hightlight-hover {
     @apply relative z-[2] after:absolute after:inset-0 after:z-[-1] after:-ml-1.5 after:h-[105%] after:w-0 after:bg-primary-300 after:transition-all after:duration-1000 after:ease-out hover:after:w-full
+  }
+  a {
+    @apply text-primary-500 relative before:absolute before:w-0 before:h-0.5 before:bg-primary-500 before:transition-all before:duration-500 before:-bottom-1 before:left-1/2 hover:before:left-0 hover:before:w-full;
+  }
+  input, textarea {
+    @apply transition-all bg-transparent outline-none border-b-[1px] hover:border-gray-400 focus:border-gray-500 dark:hover:border-gray-600 dark:focus:border-gray-500 dark:border-background-dark-secondary pb-2 dark:placeholder:text-gray-600 placeholder:text-gray-400
+  }
+  button {
+    @apply transition-all dark:bg-background-light-primary hover:dark:bg-background-light-secondary  px-4 py-2 dark:text-black bg-background-dark-primary text-white hover:bg-background-dark-secondary font-light !important
   }
 }
 
@@ -45,3 +53,4 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #77808990;
   border-radius: 6px;
 }
+

@@ -1,4 +1,5 @@
 import "i18next";
+import { NextRouter } from "next/router";
 
 export type ThemeOption = "dark" | "light";
 
@@ -13,4 +14,12 @@ declare module "i18next" {
     defaultNS: "common";
     resources: I18nNamespaces;
   }
+}
+
+declare module "next/router" {
+  export type Locale = "en" | "es";
+  export function useRouter(): Omit<NextRouter, "locale" | "locales"> & {
+    locale: Locale;
+    locales: Locale[];
+  };
 }

@@ -5,7 +5,7 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Layout } from "~/components/common";
-import { About, Skills, Contact, Home } from "~/components/sections";
+import { About, Experience, Contact, Home, Projects } from "~/components/sections";
 
 type Props = {};
 
@@ -27,7 +27,8 @@ const Portfolio: NextPage = (_props: InferGetStaticPropsType<typeof getStaticPro
       <Layout>
         <Home />
         <About />
-        <Skills />
+        <Experience />
+        <Projects />
         <Contact />
       </Layout>
     </>

@@ -15,7 +15,7 @@ module.exports = {
     typeof window === "undefined" ? require("path").resolve("./public/locales") : "/locales",
 
   reloadOnPrerender: process.env.NODE_ENV === "development",
-
+  returnObjects: true,
   /**
    * @link https://github.com/i18next/next-i18next#6-advanced-configuration
    */

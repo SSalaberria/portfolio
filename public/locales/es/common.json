@@ -1,8 +1,61 @@
 {
   "sections": {
-    "home": { "label": "Inicio", "heading": "Hola, me llamo","description": "Soy un desarrollador de software apasionado centrado en el desarrollo web con un fuerte deseo de hacer que las cosas no sólo funcionen, sino también que sean escalables." },
-    "about": { "label": "Sobre mi", "description": "¡Hola! Soy Sebastián, un desarrollador de software con afinidad por todo lo relacionado con el desarrollo web. He estado creando cosas en internet desde mi adolescencia, jugando con APIs de juegos y scripts en Python. Avanzando hasta el día de hoy, tengo estudios en ingeniería de sistemas y he adquirido una valiosa experiencia como desarrollador.<br /> <br />La mayor parte de mi experiencia laboral se ha centrado en el desarrollo frontend, lo que lo convierte en la mejor habilidad en mi caja de herramientas. Sin embargo, me encanta experimentar en ambos lados del desarrollo, especialmente cuando se trata de proyectos personales con el stack MERN.<br /> <br />Soy un firme creyente en el aprendizaje y la evolución constante, y siempre me esfuerzo por mantenerme actualizado con las últimas tecnologías y tendencias de la industria. Cuando no estoy ocupado programando, es probable que me encuentres levantando pesas, nadando o jugando algunos videojuegos." },
-    "skills": { "label": "Habilidades" },
-    "contact": { "label": "Contactame" }
+    "home": {
+      "label": "Inicio",
+      "heading": "Hola, me llamo",
+      "description": "Soy un desarrollador de software apasionado centrado en el desarrollo web con un fuerte deseo de hacer que las cosas no sólo funcionen, sino también que sean escalables."
+    },
+    "about": {
+      "label": "Sobre mi",
+      "description": "¡Hola! Soy Sebastián, un desarrollador de software con afinidad por todo lo relacionado con el desarrollo web. He estado creando cosas en internet desde mi adolescencia, jugando con APIs de juegos y scripts en Python. Avanzando hasta el día de hoy, tengo estudios en ingeniería de sistemas y he adquirido una valiosa experiencia como desarrollador.<br /> <br />La mayor parte de mi experiencia laboral se ha centrado en el desarrollo frontend, lo que lo convierte en la mejor habilidad en mi caja de herramientas. Sin embargo, me encanta experimentar en ambos lados del desarrollo, especialmente cuando se trata de proyectos personales con el stack MERN.<br /> <br />Soy un firme creyente en el aprendizaje y la evolución constante, y siempre me esfuerzo por mantenerme actualizado con las últimas tecnologías y tendencias de la industria. Cuando no estoy ocupado programando, es probable que me encuentres levantando pesas, nadando o jugando algunos videojuegos."
+    },
+    "experience": {
+      "label": "Experiencia",
+      "experiences": [
+        {
+          "company": "NUQLEA",
+          "website": "https://www.nuqlea.com/",
+          "roles": [
+            {
+              "position": "Desarrollador Full Stack",
+              "start": 1656676800000,
+              "end": 1669896000000,
+              "descriptions": [
+                "Desarrollé herramientas internas basadas en React para ayudar en procesos críticos de negocio.",
+                "Estuve involucrado en el mantenimiento y extensión de funcionalidades para microservicios internos basados en Node."
+              ]
+            },
+            {
+              "position": "Desarrollador Front End",
+              "start": 1629115200000,
+              "end": 1656676800000,
+              "descriptions": [
+                "Participé en un proyecto de migración de una plataforma de e-commerce, trasladando una arquitectura monolítica a una orientada a servicios basada en Next.js.",
+                "Desarrollé una plataforma web de BI construida sobre React para inversores y socios estrátegicos de la empresa.",
+                "Me comuniqué y trabajé con equipos multidisciplinares e interorganizacionales de ingenieros de datos, desarrolladores back-end, diseñadores UI/UX y POs."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "label": "Proyectos"
+    },
+    "contact": {
+      "label": "Contacto",
+      "header": "Simplemente saludá.",
+      "subheader": "Siempre estoy abierto a hablar de cosas nuevas.",
+      "mail_label": "Enviame un mail a",
+      "networks_label": "Seguime",
+      "form": {
+        "placeholders": {
+          "name": "Tu nombre",
+          "email": "Tu dirección de correo electrónico",
+          "content": "Tu pregunta"
+        },
+        "submit": "ENVIAR"
+      }
+    }
   }
 }

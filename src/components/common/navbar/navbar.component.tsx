@@ -22,8 +22,12 @@ export function Navbar() {
         label: t("sections.about.label"),
       },
       {
-        id: "skills",
-        label: t("sections.skills.label"),
+        id: "experience",
+        label: t("sections.experience.label"),
+      },
+      {
+        id: "projects",
+        label: t("sections.projects.label"),
       },
       {
         id: "contact",
@@ -70,11 +74,9 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", checkSectionIntersect);
   }, []);
 
-  console.log(navOptions);
-
   return (
     <nav
-      className=" fixed left-0 top-0 z-20 w-full border-b border-gray-200 bg-background-light-primary transition-all duration-500 dark:border-gray-600 dark:bg-background-dark-primary"
+      className=" fixed left-0 top-0 z-20 w-full border-b border-gray-200 bg-background-light-primary transition-transform duration-500 dark:border-gray-600 dark:bg-background-dark-primary"
       style={{
         transform: scrollDir === "down" ? "translate(0, -6rem)" : "translate(0, 0px)",
       }}
@@ -117,7 +119,7 @@ export function Navbar() {
               <li key={opt.id}>
                 <a
                   aria-current="page"
-                  className="nav-link block rounded dark:text-white"
+                  className="nav-link block rounded text-paragraph-light before:-bottom-2 dark:text-white"
                   href={`#${opt.id}`}
                   id={`${opt.id}-nav-link`}
                 >

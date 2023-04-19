@@ -7,7 +7,7 @@ export function Home() {
 
   return (
     <section
-      className="container flex min-h-screen w-full items-center justify-center md:justify-start"
+      className="container mb-0 flex min-h-screen w-full items-center justify-center md:justify-start"
       id="home"
     >
       <div className="flex flex-col gap-8 md:gap-4">
@@ -34,7 +34,9 @@ export function Home() {
         />
       </div>
       <svg
-        className={[css["dotted-circle"], ""].join(" ")}
+        className={[css["dotted-circle"], " hidden stroke-black dark:stroke-white sm:block"].join(
+          " ",
+        )}
         height="800"
         overflow="visible"
         width="800"
@@ -45,7 +47,6 @@ export function Home() {
           cy="400"
           fill="none"
           r="400"
-          stroke="#fff"
           stroke-dasharray="12.921,11.9271"
           stroke-miterlimit="10"
           stroke-width="2"
