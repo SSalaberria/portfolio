@@ -54,7 +54,8 @@
           "email": "Your email address",
           "content": "Your question"
         },
-        "submit": "SUBMIT"
+        "submit": "SUBMIT",
+        "success_message": "Thank you for getting in contact! <br /> I'll try to get back to you as soon as possible."
       }
     }
   }

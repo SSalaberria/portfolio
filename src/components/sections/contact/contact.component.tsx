@@ -1,5 +1,8 @@
-import { FormEvent, SyntheticEvent, useState } from "react";
+import Image from "next/image";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+
+import { useEmailService } from "~/hooks";
 
 const networks = [
   {
@@ -44,7 +47,8 @@ const networks = [
 
 export function Contact() {
   const { t } = useTranslation("common");
-  const [status, setStatus] = useState<"inactive" | "loading" | "resolved">("inactive");
+  const { status, sendEmail } = useEmailService();
+  const inputsDisabled = useMemo(() => status === "loading", [status]);
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -55,7 +59,7 @@ export function Contact() {
       content: { value: string };
     };
 
-    setStatus("loading");
+    sendEmail({ name: name.value, email: email.value, content: content.value });
   };
 
   return (
@@ -82,30 +86,62 @@ export function Contact() {
           </div>
         </div>
       </div>
-      <div className="w-full self-center" onSubmit={handleSubmit}>
-        <form className="flex w-full flex-col gap-4">
-          <input
-            autoComplete="off"
-            id="name"
-            placeholder={t("sections.contact.form.placeholders.name")}
-            type="text"
+      <div className="w-full self-center">
+        {status !== "resolved" && (
+          <form className="flex w-full flex-col gap-4" onSubmit={handleSubmit}>
+            <input
+              required
+              autoComplete="off"
+              disabled={inputsDisabled}
+              id="name"
+              minLength={4}
+              placeholder={t("sections.contact.form.placeholders.name")}
+              type="text"
+            />
+            <input
+              required
+              autoComplete="off"
+              disabled={inputsDisabled}
+              id="email"
+              placeholder={t("sections.contact.form.placeholders.email")}
+              type="email"
+            />
+            <textarea
+              required
+              className=""
+              disabled={inputsDisabled}
+              id="content"
+              minLength={4}
+              placeholder={t("sections.contact.form.placeholders.content")}
+              rows={4}
+            />
+            <button
+              className="ml-auto min-h-[2rem] min-w-[6rem]"
+              disabled={inputsDisabled}
+              type="submit"
+            >
+              {inputsDisabled ? (
+                <Image
+                  alt="loading"
+                  className="m-auto"
+                  height={20}
+                  src="/images/loading.svg"
+                  width={20}
+                />
+              ) : (
+                t("sections.contact.form.submit")
+              )}
+            </button>
+          </form>
+        )}
+        {status === "resolved" && (
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("sections.contact.form.success_message"),
+            }}
+            className=" text-center text-m"
           />
-          <input
-            autoComplete="off"
-            id="email"
-            placeholder={t("sections.contact.form.placeholders.email")}
-            type="email"
-          />
-          <textarea
-            className=""
-            id="content"
-            placeholder={t("sections.contact.form.placeholders.content")}
-            rows={6}
-          />
-          <button className="ml-auto" disabled={status === "loading"} type="submit">
-            {t("sections.contact.form.submit")}
-          </button>
-        </form>
+        )}
       </div>
     </section>
   );

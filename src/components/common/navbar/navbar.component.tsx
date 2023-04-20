@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { useScrollDirection } from "~/hooks/use-scroll-direction";
+import { useScrollDirection } from "~/hooks";
 
 import { LocaleSwitch } from "./locale-switch.component";
 import { ThemeSwitch } from "./theme-switch.component";

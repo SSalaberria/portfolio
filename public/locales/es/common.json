@@ -54,7 +54,8 @@
           "email": "Tu dirección de correo electrónico",
           "content": "Tu pregunta"
         },
-        "submit": "ENVIAR"
+        "submit": "ENVIAR",
+        "success_message": "Gracias por contactarte! <br /> Voy a intentar contestarte lo mas pronto posible."
       }
     }
   }
