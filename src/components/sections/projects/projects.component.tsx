@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 
+import { ProjectCard } from "./project-card.component";
+
 export function Projects() {
   const { t } = useTranslation("common");
 
@@ -8,7 +10,7 @@ export function Projects() {
       <h2 className="text-title text-headline-light dark:text-headline-dark">
         {t("sections.projects.label")}
       </h2>
-      WIP
+      <ProjectCard description="test" repositoryUrl="test" tags={[]} title="test" website="test" />
     </section>
   );
 }

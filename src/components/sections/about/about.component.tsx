@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
+import { SkillTag } from "~/components/common";
+
 const skills = [
   {
     label: "JavaScript",
@@ -492,18 +494,7 @@ export function About() {
       <div className="relative flex w-full flex-col items-center justify-center gap-4">
         <div className="flex w-full max-w-3xl flex-wrap  items-center justify-center gap-8 gap-y-8">
           {skills.map((s) => (
-            <div
-              key={s.label}
-              className={`group/item relative flex flex-col items-center justify-center gap-2 ${
-                s.website ? " cursor-pointer" : ""
-              }`}
-              onClick={() => s.website && window.open(s.website)}
-            >
-              <div className="w-10 transition-all group-hover/item:scale-125">{s.icon}</div>
-              <div className="absolute -bottom-10 text-s font-semibold opacity-0 transition-all duration-300 group-hover/item:-translate-y-3 group-hover/item:opacity-100">
-                {s.label}
-              </div>
-            </div>
+            <SkillTag key={s.label} icon={s.icon} label={s.label} website={s.website} />
           ))}
         </div>
       </div>
