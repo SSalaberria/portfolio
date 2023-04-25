@@ -40,7 +40,37 @@
       ]
     },
     "projects": {
-      "label": "Projects"
+      "label": "Projects",
+      "list": [
+        {
+          "title": "Portfolio",
+          "description": "This very website you're looking at right now! Built with React and Next.js.",
+          "website": "https://ssalaberria.com/",
+          "repository": "https://github.com/SSalaberria/portfolio",
+          "tags": ["React", "Next.js", "Tailwind CSS"]
+        },
+        {
+          "title": "Beddit",
+          "description": "A reddit clone with Next.js as a full stack framework, featuring authentication, subreddits, multitype content posts, comments trees, voting and moderating systems.",
+          "website": "https://beddit.vercel.app/",
+          "repository": "https://github.com/SSalaberria/beddit",
+          "tags": ["React", "Next.js", "Tailwind CSS", "MySQL"]
+        },
+        {
+          "title": "Chatterbox",
+          "description": "A real time chatroom app built on Next.js and NestJS, featuring dynamic text channels and online users system.",
+          "website": "https://chatter-box-app.vercel.app/",
+          "repository": "https://github.com/SSalaberria/chatter-box",
+          "tags": ["React", "Next.js", "NestJS", "MongoDB", "Websockets"]
+        },
+        {
+          "title": "Weathery",
+          "description": "A lightweight weather PWA built with React and Tailwind CSS, featuring zero js dependencies other than React.",
+          "website": "https://weather-y.netlify.app/",
+          "repository": "https://github.com/SSalaberria/weather-app",
+          "tags": ["React", "Vite", "PWA", "Tailwind CSS"]
+        }
+      ]
     },
     "contact": {
       "label": "Contact",

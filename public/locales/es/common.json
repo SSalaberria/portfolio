@@ -40,7 +40,37 @@
       ]
     },
     "projects": {
-      "label": "Proyectos"
+      "label": "Proyectos",
+      "list": [
+        {
+          "title": "Portfolio",
+          "description": "¡Este mismo sitio web que estás viendo ahora mismo! Construido con React y Next.js",
+          "website": "https://ssalaberria.com/",
+          "repository": "https://github.com/SSalaberria/portfolio",
+          "tags": ["React", "Next.js", "Tailwind CSS"]
+        },
+        {
+          "title": "Beddit",
+          "description": "Un clon de reddit con Next.js como framework full stack, incluyendo funcionalidades como autenticación, subreddits, posts de contenido multitipo, árboles de comentarios y sistemas de votación y moderación.",
+          "website": "https://beddit.vercel.app/",
+          "repository": "https://github.com/SSalaberria/beddit",
+          "tags": ["React", "Next.js", "Tailwind CSS", "MySQL"]
+        },
+        {
+          "title": "Chatterbox",
+          "description": "Una aplicación de chat en tiempo real basada en Next.js y NestJS, con canales de texto dinámicos y un sistema de usuarios en línea.",
+          "website": "https://chatter-box-app.vercel.app/",
+          "repository": "https://github.com/SSalaberria/chatter-box",
+          "tags": ["React", "Next.js", "NestJS", "MongoDB", "Websockets"]
+        },
+        {
+          "title": "Weathery",
+          "description": "Una PWA de meteorología ligera desarrollada con React y Tailwind CSS, con cero dependencias js aparte de React.",
+          "website": "https://weather-y.netlify.app/",
+          "repository": "https://github.com/SSalaberria/weather-app",
+          "tags": ["React", "Vite", "PWA", "Tailwind CSS"]
+        }
+      ]
     },
     "contact": {
       "label": "Contacto",

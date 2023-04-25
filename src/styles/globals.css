@@ -12,7 +12,7 @@
   .hightlight-hover {
     @apply relative z-[2] after:absolute after:inset-0 after:z-[-1] after:-ml-1.5 after:h-[105%] after:w-0 after:bg-primary-300 after:transition-all after:duration-1000 after:ease-out hover:after:w-full
   }
-  a {
+  .link {
     @apply text-primary-500 relative before:absolute before:w-0 before:h-0.5 before:bg-primary-500 before:transition-all before:duration-500 before:-bottom-1 before:left-1/2 hover:before:left-0 hover:before:w-full;
   }
   input, textarea {
@@ -40,17 +40,22 @@ body {
 
 body::-webkit-scrollbar {
   width: 8px;
-  background-color: #95A1AC
+  background-color: theme("colors.background.light.primary");
+}
+
+.dark body::-webkit-scrollbar {
+  width: 8px;
+  background-color: theme("colors.background.dark.primary");
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #778089;
+  background-color: #77808990;
   border-radius: 6px;
   transition: all 0.5s;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #77808990;
+  background-color: #77808970;
   border-radius: 6px;
 }
 

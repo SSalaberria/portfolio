@@ -10,7 +10,11 @@ export function Projects() {
       <h2 className="text-title text-headline-light dark:text-headline-dark">
         {t("sections.projects.label")}
       </h2>
-      <ProjectCard description="test" repositoryUrl="test" tags={[]} title="test" website="test" />
+      <div className="flex w-full flex-wrap justify-center gap-4">
+        {t("sections.projects.list", { returnObjects: true }).map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
+      </div>
     </section>
   );
 }

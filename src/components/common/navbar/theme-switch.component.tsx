@@ -25,6 +25,11 @@ export const ThemeSwitch = memo(function ThemeSwitch() {
     setTheme(newTheme);
     document.documentElement.className = newTheme;
     localStorage.setItem("theme", newTheme);
+
+    // Forcing scrollbar repaint to refresh scrollbar thumb dark/light style
+    document.documentElement.style.overflow = "hidden";
+    document.body.clientWidth;
+    document.documentElement.style.overflow = "";
   };
 
   useEffect(() => {

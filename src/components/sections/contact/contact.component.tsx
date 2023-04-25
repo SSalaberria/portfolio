@@ -78,7 +78,7 @@ export function Contact() {
             <p className="pb-1 text-s font-light">{t("sections.contact.networks_label")}</p>
             <div className="flex gap-1">
               {networks.map((network) => (
-                <a key={network.id} href={network.url} target="_blank">
+                <a key={network.id} className="link" href={network.url} target="_blank">
                   {network.icon}
                 </a>
               ))}

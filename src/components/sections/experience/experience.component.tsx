@@ -56,7 +56,7 @@ export function Experience({}) {
               <h4 className="text-center text-xl font-semibold sm:text-left">
                 {role.position}{" "}
                 {index === 0 && (
-                  <a className="" href={selectedExperience.website} target="_blank">
+                  <a className="link" href={selectedExperience.website} target="_blank">
                     @{selectedExperience.company}
                   </a>
                 )}
