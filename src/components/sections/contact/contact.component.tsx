@@ -1,13 +1,15 @@
 import Image from "next/image";
-import { useMemo } from "react";
+import { forwardRef, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import config from "~/utils/config";
 import { useEmailService } from "~/hooks";
+import { withSectionReveal } from "~/hooks/with-reveal.hoc";
 
 const networks = [
   {
     id: "linkedin",
-    url: "https://www.linkedin.com/in/sebastiansalaberria/",
+    url: config.socialNetworks.linkedin,
     icon: (
       <svg
         className=" cursor-pointer"
@@ -26,7 +28,7 @@ const networks = [
   },
   {
     id: "github",
-    url: "https://github.com/SSalaberria",
+    url: config.socialNetworks.github,
     icon: (
       <svg
         className="cursor-pointer"
@@ -45,7 +47,7 @@ const networks = [
   },
 ];
 
-export function Contact() {
+const Contact = forwardRef(function Contact(_, ref) {
   const { t } = useTranslation("common");
   const { status, sendEmail } = useEmailService();
   const inputsDisabled = useMemo(() => status === "loading", [status]);
@@ -63,7 +65,11 @@ export function Contact() {
   };
 
   return (
-    <section className="container mt-32 flex w-full flex-col md:flex-row" id="contact">
+    <section
+      ref={ref as React.RefObject<HTMLElement>}
+      className="container mt-32 flex w-full flex-col md:flex-row"
+      id="contact"
+    >
       <div className="flex w-full flex-col gap-12">
         <div className="text-title leading-none text-headline-light dark:text-headline-dark">
           {t("sections.contact.header")}
@@ -72,7 +78,7 @@ export function Contact() {
         <div className="flex gap-4">
           <div className="w-full">
             <p className="text-s font-light">{t("sections.contact.mail_label")}</p>
-            <p className="text-m font-semibold">ssalaberria@gmail.com</p>
+            <p className="text-m font-semibold">{config.email}</p>
           </div>
           <div className="w-full">
             <p className="pb-1 text-s font-light">{t("sections.contact.networks_label")}</p>
@@ -145,4 +151,6 @@ export function Contact() {
       </div>
     </section>
   );
-}
+});
+
+export default withSectionReveal(Contact);

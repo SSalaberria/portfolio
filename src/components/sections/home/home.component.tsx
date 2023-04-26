@@ -47,9 +47,9 @@ export function Home() {
           cy="400"
           fill="none"
           r="400"
-          stroke-dasharray="12.921,11.9271"
-          stroke-miterlimit="10"
-          stroke-width="2"
+          strokeDasharray="12.921,11.9271"
+          strokeMiterlimit="10"
+          strokeWidth="2"
         />
       </svg>
     </section>

@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
+import { forwardRef, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { withSectionReveal } from "~/hooks/with-reveal.hoc";
 import { formatDateToShort } from "~/utils/helpers";
 
-export function Experience({}) {
+const Experience = forwardRef(function Experience(_, ref) {
   const { t } = useTranslation("common");
   const { locale } = useRouter();
 
@@ -22,7 +23,7 @@ export function Experience({}) {
   );
 
   return (
-    <section className="container" id="experience">
+    <section ref={ref as React.RefObject<HTMLElement>} className="container" id="experience">
       <h2 className="text-title text-headline-light dark:text-headline-dark">
         {t("sections.experience.label")}
       </h2>
@@ -82,4 +83,6 @@ export function Experience({}) {
       </div>
     </section>
   );
-}
+});
+
+export default withSectionReveal(Experience);

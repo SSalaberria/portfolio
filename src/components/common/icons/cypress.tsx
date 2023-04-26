@@ -10,8 +10,8 @@ export const CypressIcon = (props: any) => (
         y1="266.492"
         y2="266.492"
       >
-        <stop offset="0" stop-color="#58d09e" />
-        <stop offset="1" stop-color="#d2d2d2" stop-opacity="0" />
+        <stop offset="0" stopColor="#58d09e" />
+        <stop offset="1" stopColor="#d2d2d2" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         gradientTransform="scale(250.185 -250.185) rotate(-30.831 -601.76 -288.04)"
@@ -22,7 +22,7 @@ export const CypressIcon = (props: any) => (
         y1="267.638"
         y2="267.638"
       >
-        <stop offset="0" stop-color="#58d09e" />
+        <stop offset="0" stopColor="#58d09e" />
         <stop offset="1" />
       </linearGradient>
     </defs>
