@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   await sendEmail({
     to: process.env.SMTP_DESTINATION || "",
-    subject: `Portfolio email - contact email received from ${name} - Contact email: ${email}`,
+    subject: `[Portfolio] Contact email received from ${name} - Contact email: ${email}`,
     text: content,
   });
 

@@ -67,13 +67,13 @@ const Contact = forwardRef(function Contact(_, ref) {
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="container mt-32 flex w-full flex-col md:flex-row"
+      className="container mt-32 flex min-h-[70vh] w-full flex-col gap-12 md:min-h-0 md:flex-row md:gap-0"
       id="contact"
     >
       <div className="flex w-full flex-col gap-12">
-        <div className="text-title leading-none text-headline-light dark:text-headline-dark">
+        <h2 className="text-center text-title leading-none text-headline-light dark:text-headline-dark md:text-left">
           {t("sections.contact.header")}
-        </div>
+        </h2>
         <p className=" max-w-sm text-l">{t("sections.contact.subheader")}</p>
         <div className="flex gap-4">
           <div className="w-full">
@@ -84,7 +84,13 @@ const Contact = forwardRef(function Contact(_, ref) {
             <p className="pb-1 text-s font-light">{t("sections.contact.networks_label")}</p>
             <div className="flex gap-1">
               {networks.map((network) => (
-                <a key={network.id} className="link" href={network.url} target="_blank">
+                <a
+                  key={network.id}
+                  aria-label={`${network.id} social media link.`}
+                  className="link"
+                  href={network.url}
+                  target="_blank"
+                >
                   {network.icon}
                 </a>
               ))}
@@ -122,7 +128,7 @@ const Contact = forwardRef(function Contact(_, ref) {
               rows={4}
             />
             <button
-              className="ml-auto min-h-[2rem] min-w-[6rem]"
+              className="btn-primary ml-auto min-h-[2rem] min-w-[6rem]"
               disabled={inputsDisabled}
               type="submit"
             >

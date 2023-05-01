@@ -1,0 +1,31 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: -10px;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+.fadeIn {
+    position: relative;
+    animation-name: fadeIn;
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.line {
+  stroke-dashoffset: 80;
+  animation: drawLine 1s ease-in-out forwards;
+}
+

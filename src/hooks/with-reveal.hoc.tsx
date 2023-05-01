@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 
-const sectionReveal = (delay = 200, viewFactor = 0.25) => ({
+export const sectionReveal = (delay = 200, viewFactor = 0.25) => ({
   origin: "bottom",
-  distance: "20px",
-  duration: 500,
+  distance: "50px",
+  duration: 700,
   delay,
   rotate: { x: 0, y: 0, z: 0 },
   opacity: 0,
@@ -16,26 +16,22 @@ const sectionReveal = (delay = 200, viewFactor = 0.25) => ({
   viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 
-export function useSectionReveal(sectionRef: React.RefObject<HTMLElement>) {
-  useEffect(() => {
-    if (!sectionRef.current) return;
-
-    async function animate() {
-      if (sectionRef.current) {
-        const sr = (await import("scrollreveal")).default;
-
-        sr().reveal(sectionRef.current, sectionReveal());
-      }
-    }
-    animate();
-  }, []);
-}
-
 export function withSectionReveal<P extends object>(Component: React.ComponentType<P>) {
   return function ComponentWithReveal(props: P) {
     const sectionRef = useRef<HTMLElement>(null);
 
-    useSectionReveal(sectionRef);
+    useEffect(() => {
+      if (!sectionRef.current) return;
+
+      async function animate() {
+        if (sectionRef.current) {
+          const sr = (await import("scrollreveal")).default();
+
+          sr.reveal(sectionRef.current, sectionReveal());
+        }
+      }
+      animate();
+    }, []);
 
     return <Component {...props} ref={sectionRef} />;
   };

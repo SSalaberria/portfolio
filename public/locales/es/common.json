@@ -2,8 +2,8 @@
   "sections": {
     "home": {
       "label": "Inicio",
-      "heading": "Hola, me llamo",
-      "description": "Soy un desarrollador de software apasionado centrado en el desarrollo web con un fuerte deseo de hacer que las cosas no sólo funcionen, sino también que sean escalables."
+      "heading": "Hola, soy",
+      "description": "Un desarrollador de software apasionado centrado en el desarrollo web con un fuerte deseo de hacer que las cosas no sólo funcionen, sino también que sean escalables."
     },
     "about": {
       "label": "Sobre mi",

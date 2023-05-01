@@ -18,8 +18,11 @@
   input, textarea {
     @apply transition-all bg-transparent outline-none border-b-[1px] hover:border-gray-400 focus:border-gray-500 dark:hover:border-gray-600 dark:focus:border-gray-500 dark:border-background-dark-secondary pb-2 dark:placeholder:text-gray-600 placeholder:text-gray-400
   }
-  button {
+  .btn-primary {
     @apply transition-all dark:bg-background-light-primary hover:dark:bg-background-light-secondary px-4 py-2 dark:text-black bg-background-dark-primary text-white hover:bg-background-dark-secondary font-light !important
+  }
+  .section-title {
+    @apply text-center text-title text-headline-light dark:text-headline-dark md:text-left;
   }
 }
 

@@ -8,10 +8,6 @@
 }
 
 .dotted-circle {
-  position: absolute;
-  bottom: -400px;
-  right: -400px;
-  opacity: 0.3;
+  transform-origin: 50% 50%;
   animation: rotation 120s linear infinite;
-  overflow: hidden;
 }

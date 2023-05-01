@@ -24,9 +24,7 @@ const Experience = forwardRef(function Experience(_, ref) {
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className="container" id="experience">
-      <h2 className="text-title text-headline-light dark:text-headline-dark">
-        {t("sections.experience.label")}
-      </h2>
+      <h2 className="section-title">{t("sections.experience.label")}</h2>
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
         <div className="relative flex flex-col">
           {workExperiences.map((exp) => (
@@ -54,14 +52,14 @@ const Experience = forwardRef(function Experience(_, ref) {
         <div className="flex w-full flex-col gap-4">
           {selectedExperience?.roles.map((role, index) => (
             <div key={role.position} className="flex flex-col gap-2">
-              <h4 className="text-center text-xl font-semibold sm:text-left">
+              <p className="text-center text-xl font-semibold sm:text-left">
                 {role.position}{" "}
                 {index === 0 && (
                   <a className="link" href={selectedExperience.website} target="_blank">
                     @{selectedExperience.company}
                   </a>
                 )}
-              </h4>
+              </p>
               <p className="text-center italic sm:text-left">
                 {formatDateToShort(new Date(role.start), locale)} —{" "}
                 {formatDateToShort(new Date(role.end), locale)}

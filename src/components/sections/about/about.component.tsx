@@ -17,9 +17,7 @@ const About = forwardRef(function About(_, ref) {
     >
       <div className="flex w-full flex-col items-center justify-center gap-8 md:flex-row">
         <div>
-          <h2 className="text-title text-headline-light dark:text-headline-dark">
-            {t("sections.about.label")}
-          </h2>
+          <h2 className="section-title ">{t("sections.about.label")}</h2>
           <p
             dangerouslySetInnerHTML={{
               __html: t("sections.about.description"),
