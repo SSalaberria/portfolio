@@ -3,7 +3,12 @@
     "home": {
       "label": "Home",
       "heading": "Hi, i'm",
-      "description": "A passionate software developer focused on web development <br /> with a strong desire to make things that are not only functional but also scalable."
+      "description": "A passionate software developer focused on web development <br /> with a strong desire to make things that are not only functional but also scalable.",
+      "resume": {
+        "label": "Download CV",
+        "description": "Download my resume in PDF format.",
+        "file": "/files/CV_Salaberria_Sebastian.pdf"
+      }
     },
     "about": {
       "label": "About me",

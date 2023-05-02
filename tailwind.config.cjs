@@ -39,6 +39,9 @@ module.exports = {
           light: "#272343",
         },
       },
+      boxShadow: {
+        jumpy: `4px 4px 0 0`,
+      },
     },
   },
   plugins: [],

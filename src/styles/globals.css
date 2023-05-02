@@ -21,6 +21,9 @@
   .btn-primary {
     @apply transition-all dark:bg-background-light-primary hover:dark:bg-background-light-secondary px-4 py-2 dark:text-black bg-background-dark-primary text-white hover:bg-background-dark-secondary font-light !important
   }
+  .btn-secondary {
+    @apply text-primary-500 border-primary-500 border-2 px-6 py-3 relative font-semibold transition-all hover:-translate-x-1 duration-200 hover:-translate-y-1 hover:shadow-jumpy !important
+  }
   .section-title {
     @apply text-center text-title text-headline-light dark:text-headline-dark md:text-left;
   }

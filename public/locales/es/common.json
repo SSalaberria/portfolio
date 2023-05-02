@@ -3,7 +3,12 @@
     "home": {
       "label": "Inicio",
       "heading": "Hola, soy",
-      "description": "Un desarrollador de software apasionado centrado en el desarrollo web con un fuerte deseo de hacer que las cosas no sólo funcionen, sino también que sean escalables."
+      "description": "Un desarrollador de software apasionado centrado en el desarrollo web con un fuerte deseo de hacer que las cosas no sólo funcionen, sino también que sean escalables.",
+      "resume": {
+        "label": "Descargar CV",
+        "description": "Descarga mi CV en formato PDF.",
+        "file": "/files/CV_Salaberria_Sebastian.pdf"
+      }
     },
     "about": {
       "label": "Sobre mi",
