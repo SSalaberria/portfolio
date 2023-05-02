@@ -53,7 +53,10 @@ const Home = forwardRef(function Home(_, ref) {
     async function animate() {
       const sr = (await import("scrollreveal")).default();
 
-      itemsRefs.current.forEach((ref, i) => sr.reveal(ref, sectionReveal(400 * i, 0.25)));
+      itemsRefs.current.forEach((ref, i) => {
+        ref.style.opacity = "1";
+        sr.reveal(ref, sectionReveal(400 * i, 0.25));
+      });
     }
     animate();
   }, []);
@@ -67,7 +70,11 @@ const Home = forwardRef(function Home(_, ref) {
       >
         <div className="flex flex-col gap-8 md:gap-6">
           {items.map((item, i) => (
-            <div key={i} ref={(ref) => (itemsRefs.current[i] = ref!)} className=" mx-auto md:mx-0">
+            <div
+              key={i}
+              ref={(ref) => (itemsRefs.current[i] = ref!)}
+              className=" mx-auto opacity-0 md:mx-0"
+            >
               {item}
             </div>
           ))}
