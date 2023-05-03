@@ -3,6 +3,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import { type NextPage } from "next";
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 
 import { Layout } from "~/components/common";
 import { About, Experience, Contact, Home, Projects } from "~/components/sections";
@@ -16,21 +17,26 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
 });
 
 const Portfolio: NextPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <Head>
-        <title>Sebastián Salaberría</title>
-        <meta
-          key="desc"
-          content="Welcome to my web developer portfolio! I'm a skilled developer with experience in HTML, CSS, JavaScript, Node and React. Check out my projects to see my skills in action."
-          name="description"
-        />
-        <meta content="Sebastián Salaberría web developer portfolio." property="og:title" />
-        <meta
-          content="Welcome to my web developer portfolio! I'm a skilled developer with experience in HTML, CSS, JavaScript, Node and React. Check out my projects to see my skills in action."
-          property="og:description"
-        />
+        <title>{t("seo.title")}</title>
+        <meta key="desc" content={t("seo.description")} name="description" />
+
+        <meta content="Sebastián Salaberría" property="og:title" />
+        <meta content={t("seo.description")} property="og:description" />
         <meta content="/images/profile-pic.webp" property="og:image" />
+        <meta content="Sebastián Salaberría" property="og:site_name" />
+        <meta content="https://sebastiansalaberria.com" property="og:url" />
+        <meta content="website" property="og:type" />
+
+        <meta content="Sebastián Salaberría" name="twitter:title" />
+        <meta content={t("seo.description")} name="twitter:description" />
+        <meta content="/images/profile-pic.webp" name="twitter:image" />
+        <meta content="summary_large_image" name="twitter:card" />
+
         <link href="/favicon.ico" rel="icon" />
         <meta content="all" name="robots" />
       </Head>

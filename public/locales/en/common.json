@@ -93,5 +93,9 @@
         "success_message": "Thank you for getting in contact! <br /> I'll try to get back to you as soon as possible."
       }
     }
+  },
+  "seo": {
+    "description": "Welcome to my web developer portfolio! I'm a software developer specializing in all things related to the web. Check out my projects to see my skills in action.",
+    "title": "Sebastián Salaberría"
   }
 }
