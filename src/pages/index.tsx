@@ -20,8 +20,19 @@ const Portfolio: NextPage = (_props: InferGetStaticPropsType<typeof getStaticPro
     <>
       <Head>
         <title>Sebastián Salaberría</title>
-        <meta content="Portfolio" name="description" />
+        <meta
+          key="desc"
+          content="Welcome to my web developer portfolio! I'm a skilled developer with experience in HTML, CSS, JavaScript, Node and React. Check out my projects to see my skills in action."
+          name="description"
+        />
+        <meta content="Sebastián Salaberría web developer portfolio." property="og:title" />
+        <meta
+          content="Welcome to my web developer portfolio! I'm a skilled developer with experience in HTML, CSS, JavaScript, Node and React. Check out my projects to see my skills in action."
+          property="og:description"
+        />
+        <meta content="/images/profile-pic.webp" property="og:image" />
         <link href="/favicon.ico" rel="icon" />
+        <meta content="all" name="robots" />
       </Head>
 
       <Layout>

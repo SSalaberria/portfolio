@@ -9,7 +9,7 @@ const Home = forwardRef(function Home(_, ref) {
   const { t } = useTranslation("common");
 
   const heading = (
-    <h1 className=" text-center text-l md:text-left md:text-m">{t("sections.home.heading")}</h1>
+    <p className=" text-center text-l md:text-left md:text-m">{t("sections.home.heading")}</p>
   );
 
   const name = (
@@ -32,7 +32,7 @@ const Home = forwardRef(function Home(_, ref) {
   );
 
   const description = (
-    <p
+    <h2
       dangerouslySetInnerHTML={{ __html: t("sections.home.description") }}
       className="max-w-prose pb-20 text-center text-l md:pb-10 md:text-left"
     />
