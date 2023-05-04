@@ -138,8 +138,9 @@ export function Navbar() {
           transform: scrollDir === "down" ? "translate(0, -6rem)" : "translate(0, 0px)",
         }}
       >
-        <div className="mx-auto flex h-24 max-w-screen-xl flex-wrap items-center justify-between p-4">
+        <div className="mx-auto flex h-20 max-w-screen-xl flex-wrap items-center justify-between p-4 md:h-24">
           <Image priority alt="logo-ss" height={48} src="/images/logo-color.svg" width={48} />
+
           <div className="flex md:order-2">
             <div className="hidden w-full max-w-[90rem] items-center justify-between md:flex">
               {Switches}

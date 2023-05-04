@@ -71,7 +71,12 @@ const Contact = forwardRef(function Contact(_, ref) {
       id="contact"
     >
       <div className="flex w-full flex-col gap-12">
-        <h2 className="text-center text-title leading-none text-headline-light dark:text-headline-dark md:text-left">
+        <h2
+          className="text-title leading-none text-headline-light dark:text-headline-dark md:text-left"
+          style={{
+            fontSize: "clamp(3rem, 3vw, 3.5rem)",
+          }}
+        >
           {t("sections.contact.header")}
         </h2>
         <p className=" max-w-sm text-l">{t("sections.contact.subheader")}</p>

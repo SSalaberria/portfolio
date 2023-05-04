@@ -34,7 +34,7 @@ const Home = forwardRef(function Home(_, ref) {
   const description = (
     <h2
       dangerouslySetInnerHTML={{ __html: t("sections.home.description") }}
-      className="max-w-prose pb-20 text-center text-l md:pb-10 md:text-left"
+      className="max-w-prose pb-16 text-center text-l md:pb-10 md:text-left"
     />
   );
 
