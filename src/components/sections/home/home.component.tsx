@@ -54,7 +54,7 @@ function Home() {
       const sr = (await import("scrollreveal")).default();
 
       itemsRefs.current.forEach((itemRef, i) => {
-        sr.reveal(itemRef, sectionReveal(400 * i, 0.25));
+        sr.reveal(itemRef, sectionReveal(350 * i, 0.25));
         setTimeout(() => (itemRef.style.visibility = "visible"), 0); // Making style change async to avoid flash of unanimated elements
       });
     }

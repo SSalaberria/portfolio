@@ -113,7 +113,7 @@ export function Navbar() {
                 href={`#${opt.id}`}
                 id={`${opt.id}-nav-link`}
                 style={{
-                  animationDelay: `${index * 150 + 100}ms`,
+                  animationDelay: `${index * 130 + 100}ms`,
                 }}
               >
                 {opt.label}
