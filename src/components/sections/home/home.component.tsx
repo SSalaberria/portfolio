@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { forwardRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
-import { sectionReveal, withSectionReveal } from "~/hooks/with-reveal.hoc";
+import { sectionReveal } from "~/hooks/with-reveal.hoc";
 
 import css from "./home.module.css";
 
-const Home = forwardRef(function Home(_, ref) {
+function Home() {
   const { t } = useTranslation("common");
+  const itemsRefs = useRef<HTMLElement[]>([]);
 
   const heading = (
     <p className=" text-center text-l md:text-left md:text-m">{t("sections.home.heading")}</p>
@@ -21,12 +22,12 @@ const Home = forwardRef(function Home(_, ref) {
       }}
     >
       <div className="relative flex flex-col rounded-md bg-primary-500 px-1 py-1 text-headline-dark">
-        <span className="">S</span>
-        <span className="">S</span>
+        <span>S</span>
+        <span>S</span>
       </div>
       <div className="flex flex-col gap-1 text-headline-light dark:text-headline-dark">
-        <span className="">ebastián</span>
-        <span className="">alaberría</span>
+        <span>ebastián</span>
+        <span>alaberría</span>
       </div>
     </h1>
   );
@@ -39,7 +40,7 @@ const Home = forwardRef(function Home(_, ref) {
   );
 
   const resumeCTA = (
-    <a download className="w-fit" href={t("sections.home.resume.file")}>
+    <a className="w-fit" href={t("sections.home.resume.file")} target="_blank">
       <button aria-label={t("sections.home.resume.description")} className="btn-secondary">
         {t("sections.home.resume.label")}
       </button>
@@ -47,41 +48,39 @@ const Home = forwardRef(function Home(_, ref) {
   );
 
   const items = [heading, name, description, resumeCTA];
-  const itemsRefs = useRef<HTMLElement[]>([]);
 
   useEffect(() => {
     async function animate() {
       const sr = (await import("scrollreveal")).default();
 
-      itemsRefs.current.forEach((ref, i) => {
-        ref.style.opacity = "1";
-        sr.reveal(ref, sectionReveal(400 * i, 0.25));
+      itemsRefs.current.forEach((itemRef, i) => {
+        sr.reveal(itemRef, sectionReveal(400 * i, 0.25));
+        setTimeout(() => (itemRef.style.visibility = "visible"), 0); // Making style change async to avoid flash of unanimated elements
       });
     }
     animate();
   }, []);
 
   return (
-    <>
-      <section
-        ref={ref as React.RefObject<HTMLElement>}
-        className="container mb-0 flex min-h-screen w-full items-center justify-center md:justify-start"
-        id="home"
-      >
-        <div className="flex flex-col gap-8 md:gap-6">
-          {items.map((item, i) => (
-            <div
-              key={i}
-              ref={(ref) => (itemsRefs.current[i] = ref!)}
-              className=" mx-auto opacity-0 md:mx-0"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <svg className="-z-1 fixed -bottom-1/2 -right-1/2 h-full w-full stroke-black opacity-30 dark:stroke-white">
+    <section
+      className="container mb-0 flex min-h-screen w-full items-center justify-center md:justify-start"
+      id="home"
+    >
+      <div className="flex flex-col gap-8 md:gap-6">
+        {items.map((item, i) => (
+          <div
+            key={i}
+            ref={(ref) => (itemsRefs.current[i] = ref!)}
+            className=" mx-auto md:mx-0"
+            style={{
+              visibility: "hidden",
+            }}
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+      <svg className="fixed -bottom-1/2 -right-1/2 -z-0 h-full w-full stroke-black opacity-30 dark:stroke-white">
         <circle
           className={css["dotted-circle"]}
           cx="50%"
@@ -93,8 +92,8 @@ const Home = forwardRef(function Home(_, ref) {
           strokeWidth="2"
         />
       </svg>
-    </>
+    </section>
   );
-});
+}
 
-export default withSectionReveal(Home);
+export default Home;
