@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 
 import { Layout } from "~/components/common";
 import { About, Experience, Contact, Home, Projects } from "~/components/sections";
+import config from "~/utils/config";
 
 type Props = {};
 
@@ -25,14 +26,14 @@ const Portfolio: NextPage = (_props: InferGetStaticPropsType<typeof getStaticPro
         <title>{t("seo.title")}</title>
         <meta key="desc" content={t("seo.description")} name="description" />
 
-        <meta content="Sebastián Salaberría" property="og:title" />
+        <meta content={t("seo.title")} property="og:title" />
         <meta content={t("seo.description")} property="og:description" />
         <meta content="/images/profile-pic.webp" property="og:image" />
-        <meta content="Sebastián Salaberría" property="og:site_name" />
-        <meta content="https://sebastiansalaberria.com" property="og:url" />
+        <meta content={t("seo.title")} property="og:site_name" />
+        <meta content={config.siteUrl} property="og:url" />
         <meta content="website" property="og:type" />
 
-        <meta content="Sebastián Salaberría" name="twitter:title" />
+        <meta content={t("seo.title")} name="twitter:title" />
         <meta content={t("seo.description")} name="twitter:description" />
         <meta content="/images/profile-pic.webp" name="twitter:image" />
         <meta content="summary_large_image" name="twitter:card" />
