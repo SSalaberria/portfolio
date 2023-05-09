@@ -71,7 +71,7 @@
         {
           "title": "Weathery",
           "description": "A lightweight weather PWA built with React and Tailwind CSS, featuring zero js dependencies other than React.",
-          "website": "https://weather-y.netlify.app/",
+          "website": "https://main--weather-y.netlify.app/",
           "repository": "https://github.com/SSalaberria/weather-app",
           "tags": ["React", "Vite", "PWA", "Tailwind CSS"]
         }

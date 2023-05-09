@@ -71,7 +71,7 @@
         {
           "title": "Weathery",
           "description": "Una PWA de meteorología ligera desarrollada con React y Tailwind CSS, con cero dependencias js aparte de React.",
-          "website": "https://weather-y.netlify.app/",
+          "website": "https://main--weather-y.netlify.app/",
           "repository": "https://github.com/SSalaberria/weather-app",
           "tags": ["React", "Vite", "PWA", "Tailwind CSS"]
         }

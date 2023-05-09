@@ -38,7 +38,6 @@ const Portfolio: NextPage = (_props: InferGetStaticPropsType<typeof getStaticPro
         <meta content="/images/profile-pic.webp" name="twitter:image" />
         <meta content="summary_large_image" name="twitter:card" />
 
-        <link href="/favicon.ico" rel="icon" />
         <meta content="all" name="robots" />
       </Head>
 
